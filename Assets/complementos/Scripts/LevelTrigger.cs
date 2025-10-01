@@ -2,11 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LevelTrigger : MonoBehaviour
 {
     [Tooltip("Arrastra aquí el objeto padre que contiene todas las rejas/barrotes.")]
     public GameObject objectToDisable;
+
+    [Header("Diálogo a Mostrar")]
+    [Tooltip("Arrastra aquí el objeto de Texto de la UI donde se mostrará el diálogo.")]
+    public Text dialogueTextUI;
+
+    [Tooltip("Escribe aquí el diálogo que quieres que aparezca. Puedes copiar y pegar desde tu Canvas.")]
+    [TextArea(3, 10)] // Esto hace que el campo de texto sea más grande en el Inspector.
+    public string dialogueToShow;
 
     [Tooltip("El nombre exacto de la escena a la que quieres pasar (ej: Nivel2).")]
     public string levelToLoad = "Nivel2";
@@ -46,6 +55,7 @@ public class LevelTrigger : MonoBehaviour
         {
             // Desactivamos el objeto (las rejas).
             objectToDisable.SetActive(false);
+            dialogueTextUI.text = dialogueToShow;
         }
 
         // Esperamos el tiempo definido en 'delayBeforeLoading'.

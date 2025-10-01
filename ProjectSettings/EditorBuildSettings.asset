@@ -9,8 +9,17 @@ EditorBuildSettings:
     path: Assets/Scenes/MenuPrincipal.unity
     guid: 12e130e10b3254643a8973262ddc905d
   - enabled: 1
+    path: Assets/Scenes/Historia.unity
+    guid: a53e169d84fc38e41aa23656f6f63f79
+  - enabled: 1
     path: Assets/Scenes/PROYECTOFPS.unity
     guid: d1c3109bdb54ad54c8a2b2838528e640
+  - enabled: 1
+    path: Assets/Scenes/PROYECTOFPS2.unity
+    guid: a56a70078439ac0448172b9bde3d1233
+  - enabled: 1
+    path: Assets/Scenes/Felicidades.unity
+    guid: 568c21d6f3fec834096b7d73085c1b68
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: 83bd76b3fce8f324f99c1989fdd7208e
