@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 namespace scgFullBodyController
 {
@@ -151,13 +152,16 @@ namespace scgFullBodyController
                 tempdoll.GetComponent<ragdollCamera>().isAi = isAiOrDummy;
                 Destroy(gameObject);
 
-                
+                Debug.Log("dontSpawnRagdoll");
+
                 if (isAiOrDummy)
                     Destroy(tempdoll, deadTime);
             }
             else if (isAiOrDummy)
             {
-                
+
+                Debug.Log("isAiOrDummy");
+
                 if (gameObject.GetComponent<Animator>())
                     gameObject.GetComponent<Animator>().enabled = false;
 
